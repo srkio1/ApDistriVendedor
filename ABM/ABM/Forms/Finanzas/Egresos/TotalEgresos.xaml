@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Egresos.TotalEgresos">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Fill">
+            <ScrollView Orientation="Both">
+                <StackLayout Orientation="Vertical" VerticalOptions="Fill">
+                    <StackLayout Orientation="Horizontal" HeightRequest="150" BackgroundColor="DodgerBlue">
+                        <ListView x:Name="listEgresos" WidthRequest="1400" VerticalOptions="Fill">
+                            <ListView.Header>
+                                <Grid BackgroundColor="Gray" ColumnSpacing="1" VerticalOptions="Fill">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Nombre" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Enero" Grid.Column="1" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Febrero" Grid.Column="2" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Marzo" Grid.Column="3" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Abril" Grid.Column="4" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Mayo" Grid.Column="5" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Junio" Grid.Column="6" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Julio" Grid.Column="7" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Agosto" Grid.Column="8" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Septiembre" Grid.Column="9" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Octubre" Grid.Column="10" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Noviembre" Grid.Column="11" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Diciembre" Grid.Column="12" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Total" Grid.Column="13" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                </Grid>
+                            </ListView.Header>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid BackgroundColor="LightGray" ColumnSpacing="1" VerticalOptions="Fill">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Text="{Binding nombre}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="1" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="2" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="3" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="4" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="5" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="6" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="7" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="8" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="9" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="10" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="11" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="12" Text="{Binding monto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="13" Text="{Binding DisplayMontoTotal}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="150" BackgroundColor="WhiteSmoke">
+                        <ListView x:Name="listEgresos2" WidthRequest="1400" VerticalOptions="Fill">
+                            <ListView.Header>
+                                <Grid BackgroundColor="Gray" ColumnSpacing="1" VerticalOptions="Fill">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Nombre" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Enero" Grid.Column="1" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Febrero" Grid.Column="2" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Marzo" Grid.Column="3" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Abril" Grid.Column="4" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Mayo" Grid.Column="5" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Junio" Grid.Column="6" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Julio" Grid.Column="7" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Agosto" Grid.Column="8" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Septiembre" Grid.Column="9" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Octubre" Grid.Column="10" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Noviembre" Grid.Column="11" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Diciembre" Grid.Column="12" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                    <Label Text="Total" Grid.Column="13" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Green" TextColor="White" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                </Grid>
+                            </ListView.Header>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:Name="listCostoV">
+                                    <ViewCell>
+                                        <Grid BackgroundColor="LightGray" ColumnSpacing="1" VerticalOptions="Fill">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Label Grid.Column="0" Text="{Binding nombre}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="1" Text="{Binding monto_enero}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="2" Text="{Binding monto_febrero}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="3" Text="{Binding monto_marzo}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="4" Text="{Binding monto_abril}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="5" Text="{Binding monto_mayo}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="6" Text="{Binding monto_junio}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="7" Text="{Binding monto_julio}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="8" Text="{Binding monto_agosto}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="9" Text="{Binding monto_septiembre}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="10" Text="{Binding monto_octubre}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="11" Text="{Binding monto_noviembre}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="12" Text="{Binding monto_diciembre}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                            <Label Grid.Column="13" Text="{Binding DisplayMontoTotal}" HorizontalOptions="Fill" BackgroundColor="White" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

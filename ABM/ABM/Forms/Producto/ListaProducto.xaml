@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.ListaProducto"
+             NavigationPage.HasBackButton="False"
+             Title="Productos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar"
+                     Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem  Text="Volver"
+                      Clicked="ToolbarItem_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        
+        <ScrollView>
+            <StackLayout Grid.Column="0">
+                <ListView x:Name="listaProd" ItemTapped="OnItemSelected" HorizontalOptions="Start">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding nombre}"
+                                      TextColor="Blue"
+                                      Detail="{Binding nombre_sub_producto}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <AbsoluteLayout x:Name="btnImg" Grid.Column="1">
+                <StackLayout AbsoluteLayout.LayoutBounds="1,1,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional" Orientation="Vertical">
+
+                    <StackLayout AbsoluteLayout.LayoutBounds="1,-3,-1,-1" Orientation="Horizontal">
+                        <Label x:Name="txtRedirecTP"
+                        Text="Tipo Producto"
+                        VerticalTextAlignment="Center"
+                        FontAttributes="Bold"
+                        Margin="0,0,15,15"
+                        AbsoluteLayout.LayoutBounds="0.9,-1.2,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsVisible="False"/>
+
+                        <Button x:Name="btnRedirecTP"
+                        Text="TP"
+                        WidthRequest="40"
+                        HeightRequest="40"
+                        BorderRadius="20"
+                        IsVisible="False"
+                        HorizontalOptions="End"    
+                        VerticalOptions="End"
+                        Margin="0,0,15,15"
+                        AbsoluteLayout.LayoutBounds="1,-3,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="MediumSpringGreen"
+                        Clicked="BtnRedirecTP_Clicked"/>
+                    </StackLayout>
+                    <StackLayout  AbsoluteLayout.LayoutBounds="1,-6,-1,-1" Orientation="Horizontal">
+                        <Label x:Name="txtRedirecSP"
+                            Text="Sub Producto"
+                            VerticalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            IsVisible="False"
+                            Margin="0,0,15,15"
+                            AbsoluteLayout.LayoutBounds="0.9,-2.7,-1,-1"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                        <Button x:Name="btnRedirecSP"
+                            Text="SP"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            BorderRadius="20"
+                            IsVisible="False"
+                            HorizontalOptions="End" 
+                            VerticalOptions="End"
+                            Margin="0,0,15,15"
+                            AbsoluteLayout.LayoutBounds="1,-6,-1,-1"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            BackgroundColor="MediumSpringGreen"
+                            Clicked="BtnRedirecSP_Clicked"/>
+                    </StackLayout>
+                    <Button x:Name="btnImgTPSP" 
+                        Text="+" 
+                        FontSize="Large" 
+                        FontAttributes="Bold" 
+                        WidthRequest="60" 
+                        HeightRequest="60" 
+                        BorderRadius="30" 
+                        HorizontalOptions="End" 
+                        VerticalOptions="End"
+                        Margin="0,0,15,15"
+                        AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="LawnGreen"
+                        Clicked="BtnImgTPSP_Clicked"/>
+                </StackLayout>
+            </AbsoluteLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Inventario.AgregarKardex">
+    
+    <ContentPage.Content>
+        <ScrollView Orientation="Both">
+            <StackLayout>
+                <Label Text="Agregar Inventario"/>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="nombreProductoEntry"
+                           Placeholder="Nombre del Producto"
+                           WidthRequest="100"/>
+                    <DatePicker x:Name="fechaInvetarioEntry"
+                                WidthRequest="150"/>
+                    <Entry x:Name="numero_facturaEntry"
+                           Placeholder="Numero de Factura"
+                           Keyboard="Numeric"
+                           WidthRequest="100"/>
+                    <Entry x:Name="detalleEntry"
+                           Placeholder="Detalle"
+                           WidthRequest="100"/>
+                    <Entry x:Name="precio_compraEntry"
+                           Placeholder="Precio de Compra"
+                           Keyboard="Numeric"
+                           WidthRequest="100"/>
+                    <Entry x:Name="unidadesEntry"
+                           Placeholder="Unidades"
+                           Keyboard="Numeric"
+                           WidthRequest="100"/>
+                </StackLayout>
+                <Label Text="Fisico"/>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="entrada_fiscaEntry"
+                           Placeholder="Entrada"
+                           Keyboard="Numeric"
+                           WidthRequest="150"/>
+                    <Entry x:Name="salida_fisicaEntry"
+                           Placeholder="Salida"
+                           Keyboard="Numeric"
+                           WidthRequest="150"/>
+                    <Entry x:Name="saldo_fisicaEntry"
+                           Placeholder="Saldo"
+                           Keyboard="Numeric"
+                           WidthRequest="150"/>
+                </StackLayout>
+                <Label Text="Valorado"/>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="entrada_valoradoEntry"
+                           Placeholder="Entrada"
+                           Keyboard="Numeric"
+                           WidthRequest="150"/>
+                    <Entry x:Name="salida_valoradoEntry"
+                           Placeholder="Salida"
+                           Keyboard="Numeric"
+                           WidthRequest="150"/>
+                    <Entry x:Name="saldo_valoradoEntry"
+                           Placeholder="Saldo"
+                           Keyboard="Numeric"
+                           WidthRequest="150"/>
+                </StackLayout>
+                <Entry x:Name="promedioEntry"
+                       Placeholder="Promedio"
+                       Keyboard="Numeric"
+                       WidthRequest="120"/>
+                <Button x:Name="btnGuardar"
+                        Text="Guardar"
+                        Clicked="BtnGuardar_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

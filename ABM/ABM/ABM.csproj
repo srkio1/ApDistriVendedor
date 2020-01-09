@@ -1,0 +1,327 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991265" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.4.0.991265" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Forms\Agenda\AgregarAgenda.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Agenda\EditarAgenda.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Agenda\Listaagenda.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Agenda\ListadoHistorialAgenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Agenda\VerAgenda1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Cliente\AgregarCliente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Cliente\EditarBorrarCliente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Cliente\HistorialCliente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Cliente\ListaCliente.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Cliente\MapaClientes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\AgregarCostoFijo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\AgregarCostoVariable.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\EditarBorrarCostoFijo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\EditarBorrarCostoVariable.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\ListaCostoFijo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\ListaCostoVariable.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Egresos\TotalEgresos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\ListaFinanzas.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Index.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Finanzas\Ingresos\ListaVentas.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\IniciarSesion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Inventario\AgregarKardex.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Inventario\InventarioGeneral.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Inventario\Kardex.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Inventario\ListaInventario.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Inventario\VistaKardex.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\AgregarProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\AgregarSubProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\AgregarTipoProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\EditarBorrarProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\EditarBorrarSubProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\EditarBorrarTipoProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\ListaProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\ListaSubProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Producto\ListaTipoProducto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Vendedor\AgregarVendedor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Vendedor\EditarBorrarVendedor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Vendedor\HistorialVendedor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Vendedor\ListaVendedor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Venta\AgregarVenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Venta\EditarBorrarVenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Venta\ListaDetalleVenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Venta\ListaVenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\Venta\MostrarVenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Agregar_TP.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Agenda\AgregarAgenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Agenda\EditarAgenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Agenda\Listaagenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Agenda\ListadoHistorialAgenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Agenda\VerAgenda1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Cliente\AgregarCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Cliente\EditarBorrarCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Cliente\HistorialCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Cliente\ListaCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Cliente\MapaClientes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Compra\AgregarCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Compra\EditarBorrarCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Compra\ListaCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Compra\MostrarCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\AgregarCostoFijo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\AgregarCostoVariable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\EditarBorrarCostoFijo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\EditarBorrarCostoVariable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\ListaCostoFijo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\ListaCostoVariable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Egresos\TotalEgresos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\Ingresos\ListaVentas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Finanzas\ListaFinanzas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Index.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\InicioSesion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Inventario\AgregarKardex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Inventario\InventarioGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Inventario\Kardex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Inventario\ListaInventario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Inventario\VistaKardex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\AgregarProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\AgregarSubProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\AgregarTipoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\EditarBorrarProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\EditarBorrarSubProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\EditarBorrarTipoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\ListaProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\ListaSubProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Producto\ListaTipoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Proveedor\AgregarProveedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Proveedor\EditarBorrarProveedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Proveedor\ListaProveedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Vendedor\AgregarVendedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Vendedor\EditarBorrarVendedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Vendedor\HistorialVendedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Vendedor\ListaVendedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Venta\AgregarVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Venta\EditarBorrarVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Venta\ListaDetalleVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Venta\ListaVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Forms\Venta\MostrarVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="HamburgerMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Forms\Compra\" />
+    <Folder Include="Forms\Proveedor\" />
+  </ItemGroup>
+</Project>

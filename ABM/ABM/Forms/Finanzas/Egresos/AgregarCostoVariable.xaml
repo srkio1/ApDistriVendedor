@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Egresos.AgregarCostoVariable"
+             Title="Agregar Costo Variable">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="nombreEntry" HorizontalOptions="FillAndExpand" Placeholder="Nombre"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha_Dia: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="fechadiaEntry" HorizontalOptions="FillAndExpand" Placeholder="Fecha Dia" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="Mes" Text="Mes" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Picker HorizontalOptions="FillAndExpand"  x:Name="tipomes" Title="Mes" SelectedIndexChanged="Tipomes_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>ENERO</x:String>
+                            <x:String>FEBRERO</x:String>
+                            <x:String>MARZO</x:String>
+                            <x:String>ABRIL</x:String>
+                            <x:String>MAYO</x:String>
+                            <x:String>JUNIO</x:String>
+                            <x:String>JULIO</x:String>
+                            <x:String>AGOSTO</x:String>
+                            <x:String>SEPTIEMBRE</x:String>
+                            <x:String>OCTUBRE</x:String>
+                            <x:String>NOVIEMBRE</x:String>
+                            <x:String>DICIEMBRE</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Descripcion: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="descripcionEntry" HorizontalOptions="FillAndExpand" Placeholder="Descripcion" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Monto: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="montoEntry" HorizontalOptions="FillAndExpand" Placeholder="Monto noviembre" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+
+                <Button x:Name="btnGuardarCostoVariable"
+                        Text="Guardar"
+                        Clicked="BtnGuardarCostoVariable_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

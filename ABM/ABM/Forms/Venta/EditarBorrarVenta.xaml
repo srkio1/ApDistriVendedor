@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Venta.EditarBorrarVenta">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="idVentaEntry"
+                       Text="ID" IsVisible="False"/>
+                <Label Text="Numero de Factura"/>
+                <Entry x:Name="numero_facturaVentaEntry"
+                       Text="Numero de Factura"/>
+                <Label Text="Fecha Venta"/>
+                    <DatePicker x:Name="fechaVentaPick"/>
+                <Label Text="Tipo Venta"/>
+                    <Entry x:Name="tipo_ventaEntry"
+                       Text="Tipo de Venta"/>
+                <Label Text="Cliente"/>
+                    <Entry x:Name="clienteVentaEntry"
+                       Text="Cliente"/>
+                <Label Text="Vendedor"/>
+                    <Entry x:Name="vendedorEntry"
+                       Text="Vendedor"/>
+                <Label Text="Saldo"/>
+                    <Entry x:Name="saldoVentaEntry"
+                       Text="Saldo"
+                       Keyboard="Numeric"/>
+                <StackLayout x:Name="stkProd"/>
+                <Label Text="Total Venta"/>
+                    <Entry x:Name="totalVentaEntry"
+                       Text="Total"
+                       Keyboard="Numeric"/>
+                <Button x:Name="btnEditarVenta"
+                        Text="Editar"
+                        Clicked="BtnEditarVenta_Clicked"/>
+                <Button x:Name="btnBorrarVenta"
+                        Text="Borrar"
+                        Clicked="BtnBorrarVenta_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

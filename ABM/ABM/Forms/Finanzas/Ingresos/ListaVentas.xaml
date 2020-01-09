@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Finanzas.Ingresos.ListaVentas"
+             Title="Ingresos">
+    <ContentPage.Content>
+        <ScrollView Orientation="Both">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <ListView x:Name="listFinanzas" ItemTapped="OnItemSelected"  WidthRequest="1310">
+                        <ListView.Header>
+                            <Grid BackgroundColor="Gray" ColumnSpacing="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Numero Factura" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Cliente" Grid.Column="1" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Fecha" Grid.Column="2" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Vendedor" Grid.Column="3" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Tipo Venta" Grid.Column="4" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Descuento" Grid.Column="5" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Saldo" Grid.Column="6" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                                <Label Text="Total" Grid.Column="7" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5"/>
+                            </Grid>
+                        </ListView.Header>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid BackgroundColor="LightGray" ColumnSpacing="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding numero_factura}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="1" Text="{Binding cliente}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="2" Text="{Binding fecha}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="3" Text="{Binding vendedor}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="4" Text="{Binding tipo_venta}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="5" Text="{Binding descuento}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="6" Text="{Binding saldo}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="7" Text="{Binding total}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListView.Footer>
+                            <Grid BackgroundColor="Gray" ColumnSpacing="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="2" x:Name="txtCantSum" HorizontalOptions="Fill" BackgroundColor="#fff200" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                <Label Grid.Column="4" x:Name="txtBsSum" HorizontalOptions="Fill" BackgroundColor="#fff200" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                            </Grid>
+                        </ListView.Footer>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

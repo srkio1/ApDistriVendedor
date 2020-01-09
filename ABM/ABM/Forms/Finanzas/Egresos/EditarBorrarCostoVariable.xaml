@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Egresos.EditarBorrarCostoVariable">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="idCostoVEntry" IsVisible="False"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="nombreEntry" HorizontalOptions="FillAndExpand" Placeholder="Nombre"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha_Dia: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="fechadiaEntry" HorizontalOptions="FillAndExpand" Placeholder="Fecha Dia" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="FechaMes: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="fechamesEntry" HorizontalOptions="FillAndExpand" Placeholder="Fecha Mes" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Descripcion: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="descripcionEntry" HorizontalOptions="FillAndExpand" Placeholder="Descripcion" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Monto: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="montoEntry" HorizontalOptions="FillAndExpand" Placeholder="Monto noviembre" Text="0" Keyboard="Numeric"/>
+                </StackLayout>
+
+                <Button x:Name="btnEditarCV"
+                        Text="Guardar"
+                        Clicked="BtnEditarCV_Clicked"/>
+                <Button x:Name="btnBorrarCV"
+                        Text="Eliminar"
+                        Clicked="BtnBorrarCV_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Egresos.AgregarCostoFijo"
+             Title="Agregar Costo Fijo">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                <Entry x:Name="nombreEntry" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Monto: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                <Entry x:Name="montoEntry" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Fecha Año" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                <Entry x:Name="fechaMesEntry" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <Button x:Name="btnAgregarCostoFijo"
+                    Text="Guardar"
+                    Clicked="BtnAgregarCostoFijo_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

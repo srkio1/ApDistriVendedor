@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Finanzas.ListaFinanzas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="LightGreen" VerticalOptions="FillAndExpand">
+                <Grid x:Name="finanzaGrid" BackgroundColor="White" ColumnSpacing="1" VerticalOptions="FillAndExpand" RowSpacing="1" Padding="1,1,1,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="1" BackgroundColor="GreenYellow" x:Name="stk_ingresos"
+                                 BindingContext="{x:Reference stk_ingresos}">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <ImageButton x:Name="btnIngresos"
+                                     Source="icon_ingresos"
+                                     HorizontalOptions="CenterAndExpand"
+                                     CornerRadius="10"/>
+                        <Label Text="INGRESOS" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1" Margin="1" BackgroundColor="GreenYellow" x:Name="stk_egresos">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </StackLayout.GestureRecognizers>
+                        <ImageButton x:Name="btnEgresos"
+                                     Source="icon_ingresos"
+                                     HorizontalOptions="CenterAndExpand"
+                                     CornerRadius="10"/>
+                        <Label Text="EGRESOS FIJOS" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="1" BackgroundColor="GreenYellow" x:Name="stk_egresosvar">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                        </StackLayout.GestureRecognizers>
+                        <ImageButton x:Name="btnEgresosvar"
+                                     Source="icon_ingresos"
+                                     HorizontalOptions="CenterAndExpand"
+                                     CornerRadius="10"/>
+                        <Label Text="EGRESOS VARIABLES" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1" Margin="1" BackgroundColor="GreenYellow" x:Name="stk_capital">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                        </StackLayout.GestureRecognizers>
+                        <ImageButton x:Name="btncapital"
+                                     Source="icon_ingresos"
+                                     HorizontalOptions="CenterAndExpand"
+                                     CornerRadius="10"/>
+                        <Label Text="CAPITAL" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

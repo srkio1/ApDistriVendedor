@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Venta.AgregarVenta"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             Title="Agregar Venta">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="stkVenta" BackgroundColor="White">
+                <StackLayout Orientation="Horizontal">
+                    <Picker x:Name="clientePicker" Title="Cliente"
+                            ItemsSource="{Binding nombre}"
+                            ItemDisplayBinding="{Binding nombre}"
+                            SelectedItem="{Binding nombre}"
+                            SelectedIndexChanged="ClientePicker_SelectedIndexChanged_1"
+                            WidthRequest="150"/>
+                    <Entry x:Name="vendedorPicker" IsReadOnly="True"
+                            WidthRequest="150"/>
+                    <Entry x:Name="numero_facturaVentaEntry"
+                           Placeholder="Numero de factura"
+                           Keyboard="Numeric"
+                           WidthRequest="180"/>
+                    <DatePicker x:Name="fechaVentaEntry" Date="{x:Static system:DateTime.Now}" 
+                                MaximumDate="12/31/2030"
+                                MinimumDate="01/01/2019"
+                                WidthRequest="120">
+                    </DatePicker>
+                </StackLayout>
+                <Button Text="Agregar Producto" x:Name="btnAddProducto" Clicked="BtnAddProducto_Clicked"/>
+                <StackLayout x:Name="stkProductos" BackgroundColor="#FF6100" Padding="10">
+                    <Label x:Name="txttest" FontSize="Medium" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest2" FontSize="Medium" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest3" FontSize="Medium" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest4" FontSize="Medium" TextColor="Black" IsVisible="False"/>
+                </StackLayout>
+                <Picker x:Name="tipoVentaEntry" Title="Tipo de Pago" SelectedIndexChanged="TipoVentaEntry_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Contado</x:String>
+                        <x:String>Credito</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="saldo_VentaEntry"
+                       Placeholder="Credito"
+                       Keyboard="Numeric"
+                       Text="0"
+                       IsVisible="False"/>
+                <Entry x:Name="totalVentaEntry"
+                       Keyboard="Numeric"
+                       Placeholder="Total" />
+                <Button x:Name="btnVentaGuardar"
+                        Text="Guardar"
+                        Clicked="BtnVentaGuardar_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

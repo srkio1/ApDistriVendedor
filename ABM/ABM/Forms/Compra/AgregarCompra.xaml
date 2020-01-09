@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+           x:Class="ABM.Forms.Compra.AgregarCompra">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="stkCompra">
+                <StackLayout Orientation="Horizontal">
+                    <Picker x:Name="proveedorPicker" Title="Proveedor"
+                            ItemsSource="{Binding nombre}"
+                            ItemDisplayBinding="{Binding nombre}"
+                            SelectedItem="{Binding nombre}"
+                            SelectedIndexChanged="ProveedorPicker_SelectedIndexChanged_1"
+                            WidthRequest="150"/>
+                    <Entry x:Name="numero_facturaCompraEntry"
+                           Placeholder="Numero de factura"
+                           Keyboard="Numeric"
+                           WidthRequest="180"/>
+                    <DatePicker x:Name="fechaCompraEntry" Date="{x:Static system:DateTime.Now}"
+                                MaximumDate="12/31/2030"
+                                MinimumDate="01/01/2019"
+                                WidthRequest="120">
+                    </DatePicker>
+                </StackLayout>
+                <Button Text="Agregar Producto" x:Name="btnAddProducto" Clicked="BtnAddProducto_Clicked"/>
+                <StackLayout x:Name="stkProductos" BackgroundColor="#CED8F6">
+                    <Label x:Name="txttest" FontSize="Medium" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest2" FontSize="Micro" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest3" FontSize="Micro" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest4" FontSize="Micro" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="txttest5" FontSize="Micro" TextColor="Black" IsVisible="False"/>
+                    <Label x:Name="loquesea"/>
+                </StackLayout>
+                <Picker x:Name="tipoCompraEntry" Title="Tipo de Pago" SelectedIndexChanged="TipoCompraEntry_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>Contado</x:String>
+                        <x:String>Credito</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="saldo_CompraEntry"
+                       Placeholder="Credito"
+                       Keyboard="Numeric"
+                       Text="0"
+                       IsVisible="False"/>
+                <Entry x:Name="totalCompraEntry"
+                       Keyboard="Numeric"
+                       Placeholder="Total" />
+                <Button x:Name="btnCompraGuardar"
+                        Text="Guardar"
+                        Clicked="BtnCompraGuardar_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

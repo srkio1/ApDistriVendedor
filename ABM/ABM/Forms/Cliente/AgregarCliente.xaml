@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Cliente.AgregarCliente"
+             Title="Agregar Cliente">
+    <ContentPage.Content>
+    <ScrollView>
+        <StackLayout>
+            
+        <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre:" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="nombreEntry" HorizontalOptions="FillAndExpand"
+                   Placeholder="Nombre"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+                    <Label Text="Ubicacion" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="ubconfirmacionEntry" 
+                           WidthRequest="300"
+                           Placeholder="Ubicacion"/>
+                    <Entry x:Name="ubicacionLatitudEntry" IsVisible="False"/>
+                    <Entry x:Name="ubicacionLongitudEntry" IsVisible="False"/>
+                    <Button x:Name="btnUbicacion" HorizontalOptions="Fill"
+                            Text="Obtener ubicacion"
+                            Clicked="BtnUbicacion_Clicked"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+                    <Label Text="Telefono" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="telefonoEntry"
+                           HorizontalOptions="FillAndExpand"
+                   Placeholder="Telefono"
+                   Keyboard="Numeric"/>
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+                    <Label Text="NIT" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="nitEntry"
+                           HorizontalOptions="FillAndExpand"
+                           Placeholder="NIT"
+                           Keyboard="Numeric"/>
+            </StackLayout>
+
+        <StackLayout>
+            <Button Text="Guardar"
+                    x:Name="btnGuardarCliente"
+                    Clicked="BtnGuardarCliente_Clicked"/>
+        </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

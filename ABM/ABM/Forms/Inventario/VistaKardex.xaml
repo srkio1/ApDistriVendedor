@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Inventario.VistaKardex">
+    <ContentPage.Content>
+        <ScrollView Orientation="Both">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="idInvEntry"
+                           Placeholder="ID"/>
+                    <Entry x:Name="nombre_productoEntry"
+                           Placeholder="Producto"/>
+                    <Entry x:Name="fecha_inv"
+                           Placeholder="Fecha"/>
+                    <Entry x:Name="numero_factura"
+                           Placeholder="Numero Factura"/>
+                    <Entry x:Name="detalleEntry"
+                           Placeholder="Detalle"/>
+                    <Entry x:Name="precio_compraEntry"
+                           Placeholder="Precio Compra"/>
+                    <Entry x:Name="unidadesEntry"
+                           Placeholder="Unidades"/>
+                    <Entry x:Name="entrada_fiscaEntry"
+                           Placeholder="Entrada"/>
+                    <Entry x:Name="salida_fisicaEntry"
+                           Placeholder="Salida"/>
+                    <Entry x:Name="saldo_fisicaEntry"
+                           Placeholder="Salida"/>
+                    <Entry x:Name="entrada_valoradoEntry"
+                           Placeholder="Entrada"/>
+                    <Entry x:Name="salida_valoradoEntry"
+                           Placeholder="Salida"/>
+                    <Entry x:Name="saldo_valoradoEnry"
+                           Placeholder="Saldo"/>
+                    <Entry x:Name="promedioEntry"
+                           Placeholder="Promedio"
+                           Text="{Binding Promedio, StringFormat='{0:0000}' }"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

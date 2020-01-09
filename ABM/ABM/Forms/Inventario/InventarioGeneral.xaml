@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Inventario.InventarioGeneral"
+             Title="Inventario">
+    <ContentPage.Content>   
+        <ScrollView Orientation="Both">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <ListView x:Name="listInventarioGeneral" ItemTapped="OnItemSelected" WidthRequest="750">
+                        <ListView.Header>
+                            <Grid BackgroundColor="Gray" ColumnSpacing="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="txtMarca" Text="Marcas" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="Calibre" Grid.Column="1" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="Cantidad" Grid.Column="2" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="Precio Promedio" Grid.Column="3" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="Total Bs." Grid.Column="4" FontSize="Medium" FontAttributes="Bold" BackgroundColor="#fcdd12" TextColor="Black" HorizontalTextAlignment="Center" Margin="0.5">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </ListView.Header>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid BackgroundColor="LightGray" ColumnSpacing="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding nombre}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5">
+                                        </Label>
+                                        <Label Grid.Column="1" Text="{Binding nombre_sub_producto}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="2" Text="{Binding stock}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="3" Text="{Binding promedio, StringFormat=' {0:#,0.000}'}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                        <Label Grid.Column="4" Text="{Binding stock_valorado, StringFormat=' {0:#,0.000}'}" HorizontalOptions="Fill" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListView.Footer>
+                            <Grid BackgroundColor="Gray" ColumnSpacing="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="2" x:Name="txtCantSum" HorizontalOptions="Fill" BackgroundColor="#fff200" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                                <Label Grid.Column="4" x:Name="txtBsSum" HorizontalOptions="Fill" BackgroundColor="#fff200" HorizontalTextAlignment="Center" Margin="0.5"></Label>
+                            </Grid>
+                        </ListView.Footer>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

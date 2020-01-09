@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.IniciarSesion">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Padding="5">
+            <ActivityIndicator x:Name="indicator_Cargando" IsVisible="False" IsRunning="False" Color="Green"/>
+            <StackLayout Orientation="Vertical">
+                <Entry x:Name="txtUsuario" TextColor="Black" VerticalOptions="Center" WidthRequest="300" HorizontalOptions="Center" HorizontalTextAlignment="Center" Placeholder="Ingrese su usuario"/>
+                <Entry x:Name="txtPassword" TextColor="Black" VerticalOptions="Center" WidthRequest="300" HorizontalOptions="Center" HorizontalTextAlignment="Center" Placeholder="Ingrese su contraseña"/>
+            </StackLayout>
+            <Button x:Name="btnIngresar" Text="INGRESAR" HorizontalOptions="Center" WidthRequest="120" Clicked="BtnIngresar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

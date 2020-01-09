@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Index">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid  BackgroundColor="Black" ColumnSpacing="5" RowSpacing="5" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="0" Margin="1" BackgroundColor="#f7cd23">
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="txtFechaActual" FontSize="Medium" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label x:Name="txtCajasVendidas1" Text="Cajas Vendidas" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="txtCajasVendidas2" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label x:Name="txtMesAnterior" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            <Label x:Name="txtfechaMesAnterior" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label x:Name="txtMesActual" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            <Label x:Name="txtfechaMesActual" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="1" Margin="1" BackgroundColor="#f7cd23">
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="txtefectivo1" Text="Efectivo: " FontSize="Medium" FontAttributes="Bold"/>
+                        <Label x:Name="txtefectivo2" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="inventario1" Text="Inventario: " FontSize="Medium" FontAttributes="Bold"/>
+                        <Label x:Name="inventario2" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="ctaxcobrar1" Text="Cuentas por cobrar: " FontSize="Medium" FontAttributes="Bold"/>
+                        <Label x:Name="ctaxcobrar2" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  x:Name="ctaxpagar1" Text="Cuentas por pagar: " FontSize="Medium" FontAttributes="Bold"/>
+                        <Label  x:Name="ctaxpagar2" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="total1" Text="Total: " FontSize="Medium" FontAttributes="Bold"/>
+                        <Label x:Name="total2" FontSize="Medium" />
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0" Margin="1" BackgroundColor="#f7cd23">
+                    <StackLayout x:Name="stknose"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1" Margin="1" BackgroundColor="#f7cd23">
+                    <Label Text=" "/>
+                    <Label x:Name="txtprueba1"/>
+                    <Label x:Name="txtprueba2"/>
+                </StackLayout>
+                <StackLayout x:Name="pruebastk">
+
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Agenda.VerAgenda1">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Titulo" HorizontalOptions="Start"/>
+                <Label x:Name="txttitulo" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Fecha" HorizontalOptions="Start"/>
+                <Label x:Name="txtfecha" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hora" HorizontalOptions="Start"/>
+                <Label x:Name="txthora" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Descripcion" HorizontalOptions="Start"/>
+                <Label x:Name="txtdescripcion" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Estado" HorizontalOptions="Start"/>
+                <Label x:Name="txtestado" HorizontalOptions="End"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

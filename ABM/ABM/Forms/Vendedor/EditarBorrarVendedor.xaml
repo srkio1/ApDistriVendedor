@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Vendedor.EditarBorrarVendedor">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Historial" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="idEntry"
+                       Placeholder="id" IsVisible="False"/>
+                    <Label Text="Nombre: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="nombreEntry"
+                       Placeholder="nombre"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Telefono: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="telefonoEntry"
+                       Placeholder="telefono"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Direccion: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="direccionEntry"
+                       Placeholder="direccion"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Numera de cuenta: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="numero_cuentaEntry"
+                       Placeholder="numero de cuenta"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Cedula de identidad: " HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" FontSize="Medium"/>
+                    <Entry x:Name="cedulaEntry"
+                       Placeholder="Cedula de identidad"/>
+                </StackLayout>
+                <Button x:Name="btnEditarVendedor"
+                        Text="Editar"
+                        Clicked="BtnEditarVendedor_Clicked"/>
+                <Button x:Name="btnBorrarVendedor"
+                        Text="Borrar"
+                        Clicked="BtnBorrarVendedor_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

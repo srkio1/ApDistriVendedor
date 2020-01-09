@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ABM"
+             x:Class="ABM.MainPage">
+    <ScrollView>              
+        <StackLayout>            
+            <Button x:Name="btnRedirecTipoP"
+                Text="Tipo Producto"
+                Clicked="BtnRedirecTipoP_Clicked"/>            
+            <Button x:Name="btnRedirecSubP"
+                Text="Sub Producto"
+                Clicked="BtnRedirecSubP_Clicked"/>
+            <Button x:Name="btnRedirecProd"
+                Text="Producto"
+                Clicked="BtnRedirecProd_Clicked"/>
+            <Button x:Name="btnRedirecCliente"
+                    Text="Cliente"
+                    Clicked="BtnRedirecCliente_Clicked"/>
+            <Button x:Name="btnRedirecVendedor"
+                    Text="Vendedor"
+                    Clicked="BtnRedirecVendedor_Clicked"/>
+             <Button x:Name="btnRedirecVenta"
+                    Text="Venta"
+                    Clicked="BtnRedirecVenta_Clicked"/>
+            <Button x:Name="btnRedirecDetalleVenta"
+                    Text="Detalle Venta"
+                    Clicked="BtnRedirecDetalleVenta_Clicked"/>
+            <Button x:Name="btnRedirectInventarioGeneral"
+                    Text="Inventario General"
+                    Clicked="BtnRedirectInventarioGeneral_Clicked"/>
+            <Button x:Name="btnRedirecIndex"
+                    Text="Index"
+                    Clicked="BtnRedirecIndex_Clicked"/>
+            <Button x:Name="btnRedirectCostoFijo"
+                    Text="Costos Fijos"
+                    Clicked="BtnRedirectCostoFijo_Clicked"/>
+            <Button x:Name="btnRedirectCostoVariable"
+                    Text="CostoVariable"
+                    Clicked="BtnRedirectCostoVariable_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ABM.Forms.Compra.MostrarCompra">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Editar"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Entry x:Name="idCompraEntry" IsVisible="False"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Factura: "
+                           WidthRequest="200"
+                           TextColor="Blue"
+                           FontSize="Large"/>
+                    <Label x:Name="facturaEntry"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Large"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fecha: "
+                           WidthRequest="200"
+                           TextColor="Blue"
+                           FontSize="Large"/>
+                    <Label x:Name="fechaEntry"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Large"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Proveedor: "
+                           WidthRequest="200"
+                           TextColor="Blue"
+                           FontSize="Large"/>
+                    <Label x:Name="proveedorEntry"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Large"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Saldo"
+                           WidthRequest="200"
+                           TextColor="Blue"
+                           FontSize="Large"/>
+                    <Label x:Name="saldoEntry"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Large"/>
+                </StackLayout>
+                <StackLayout x:Name="stkPrd"></StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Total: "
+                           WidthRequest="200"
+                           TextColor="Black"
+                           FontSize="Large"/>
+                    <Label x:Name="totalEntry"
+                           HorizontalOptions="FillAndExpand"
+                           FontSize="Large"/>
+                </StackLayout>                
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
