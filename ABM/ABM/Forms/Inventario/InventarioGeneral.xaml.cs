@@ -134,5 +134,10 @@ namespace ABM.Forms.Inventario
                 listInventarioGeneral.ItemsSource = productos.OrderBy(w => w.stock_valorado);
             }
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AgregarKardex());
+        }
     }
 }

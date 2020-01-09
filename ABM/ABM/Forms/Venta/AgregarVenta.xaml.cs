@@ -459,7 +459,8 @@ namespace ABM.Forms.Venta
                         entrada_valorado = 0,
                         salida_valorado = Convert.ToInt32(cantArr[y]) * Convert.ToDecimal(promedioArr[y]),
                         saldo_valorado = Convert.ToDecimal(stockValoradoArr[y]) - (Convert.ToInt32(cantArr[y]) * Convert.ToDecimal(promedioArr[y])),
-                        promedio = (Convert.ToDecimal(stockValoradoArr[y]) - (Convert.ToInt32(cantArr[y]) * Convert.ToDecimal(promedioArr[y]))) / (Convert.ToDecimal(stockArr[y]) - Convert.ToInt32(cantArr[y])),
+                        promedio = (Convert.ToDecimal(stockValoradoArr[y]) / (Convert.ToDecimal(stockArr[y]) ))
+                        //promedio = (Convert.ToDecimal(stockValoradoArr[y]) - (Convert.ToInt32(cantArr[y]) * Convert.ToDecimal(promedioArr[y]))) / (Convert.ToDecimal(stockArr[y]) - Convert.ToInt32(cantArr[y])),
                     };
 
                     var json2 = JsonConvert.SerializeObject(inventario);
@@ -472,14 +473,15 @@ namespace ABM.Forms.Venta
                         id_producto = Convert.ToInt32(idProdArr[y]),                        
                         stock = Convert.ToDecimal(stockArr[y]) - Convert.ToInt32(cantArr[y]),
                         stock_valorado = Convert.ToDecimal(stockValoradoArr[y]) - (Convert.ToInt32(cantArr[y]) * Convert.ToDecimal(promedioArr[y])),
-                        promedio = (Convert.ToDecimal(stockValoradoArr[y]) - (Convert.ToDecimal(cantArr[y]) * Convert.ToDecimal(promedioArr[y])) / (Convert.ToDecimal(stockArr[y]) - Convert.ToDecimal(cantArr[y])))
+                       
+                        promedio = (Convert.ToDecimal(stockValoradoArr[y]) / (Convert.ToDecimal(stockArr[y])))
                     };
                     var json3 = JsonConvert.SerializeObject(producto);
                     var content3 = new StringContent(json3, Encoding.UTF8, "application/json");
                     HttpClient client3 = new HttpClient();
                     var result3 = await client3.PostAsync("http://dmrbolivia.online/api/productos/editarProducto.php", content3);
-                    //DisplayAlert("Valores", "cantidad= " + cantArr[y] + " | promedio= " + promedioArr[y] + " | stock= " + stockArr[y], "OK");
-                    
+                    DisplayAlert("Valores", "cantidad= " + cantArr[y] + " | promedio= " + promedioArr[y] + " | stock= " + stockArr[y], "OK");
+
                 }
                 Datos.Ventas ventas = new Datos.Ventas()
                 {

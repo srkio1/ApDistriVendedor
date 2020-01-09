@@ -56,7 +56,8 @@ namespace ABM.Forms.Inventario
                 }
             }
 
-            listInventario.ItemsSource = inventario_list;
+            listInventario.ItemsSource = inventario_list.OrderBy(w => w.id_inventario);
+
         }
     }
 }

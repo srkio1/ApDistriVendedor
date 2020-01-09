@@ -22,38 +22,42 @@ namespace ABM.Forms.Inventario
 
         private async void BtnGuardar_Clicked(object sender, EventArgs e)
         {
-            Datos.Inventario inventario = new Datos.Inventario()
+            try
             {
-                nombre_p = nombreProductoEntry.Text,
-                fecha_inv = fechaInvetarioEntry.Date,
-                numero_factura = Convert.ToInt32(numero_facturaEntry.Text),
-                detalle = detalleEntry.Text,
-                precio_compra = Convert.ToInt32(precio_compraEntry.Text),
-                unidades = Convert.ToInt32(unidadesEntry.Text),
-                entrada_fisica = Convert.ToInt32(entrada_fiscaEntry.Text),
-                salida_fisica = Convert.ToInt32(saldo_fisicaEntry.Text),
-                saldo_fisica = Convert.ToInt32(saldo_fisicaEntry.Text),
-                entrada_valorado = Convert.ToInt32(entrada_valoradoEntry.Text),
-                salida_valorado = Convert.ToInt32(salida_valoradoEntry.Text),
-                saldo_valorado = Convert.ToInt32(saldo_valoradoEntry.Text),
-                promedio = Convert.ToInt32(promedioEntry.Text)
-            };
+                Datos.Inventario inventario = new Datos.Inventario()
+                {
+                    nombre_p = nombreProductoEntry.Text,
+                    fecha_inv = fechaInvetarioEntry.Date,
+                    numero_factura = Convert.ToInt32(numero_facturaEntry.Text),
+                    detalle = detalleEntry.Text,
+                    precio_compra = Convert.ToDecimal(precio_compraEntry.Text),
+                    unidades = Convert.ToDecimal(unidadesEntry.Text),
+                    entrada_fisica = Convert.ToDecimal(entrada_fiscaEntry.Text),
+                    salida_fisica = Convert.ToDecimal(saldo_fisicaEntry.Text),
+                    saldo_fisica = Convert.ToDecimal(saldo_fisicaEntry.Text),
+                    entrada_valorado = Convert.ToDecimal(entrada_valoradoEntry.Text),
+                    salida_valorado = Convert.ToDecimal(salida_valoradoEntry.Text),
+                    saldo_valorado = Convert.ToDecimal(saldo_valoradoEntry.Text),
+                    promedio = Convert.ToDecimal(promedioEntry.Text)
+                };
 
-            var json = JsonConvert.SerializeObject(inventario);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-            HttpClient client = new HttpClient();
-            var result = await client.PostAsync("http://dmrbolivia.online/api/invetarios/agregarInventario.php", content);
+                var json = JsonConvert.SerializeObject(inventario);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpClient client = new HttpClient();
+                var result = await client.PostAsync("http://dmrbolivia.online/api/invetarios/agregarInventario.php", content);
 
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                await DisplayAlert("OK", "Se agrego correctamente", "OK");
-                await Navigation.PopAsync();
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    await DisplayAlert("OK", "Se agrego correctamente", "OK");
+                    await Navigation.PopAsync();
+                }
+                else
+                {
+                    await DisplayAlert("Error", result.StatusCode.ToString(), "OK");
+                    await Navigation.PopAsync();
+                }
             }
-            else
-            {
-                await DisplayAlert("Error", result.StatusCode.ToString(), "OK");
-                await Navigation.PopAsync();
-            }
+            catch (Exception result) {await DisplayAlert("Error", result.ToString(), "OK"); }
         }
     }
 }
