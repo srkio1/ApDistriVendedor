@@ -61,6 +61,7 @@ namespace ABM.Forms.Vendedor
                     await Navigation.PopAsync();
                 }
             }
+            //hola catch
             catch (Exception err1)
             {
                 await DisplayAlert("Error", "Algo salio mal, intentalo de nuevo", "OK");
